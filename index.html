@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JobHub - Find Your Dream Job</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1 class="logo">JobHub</h1>
+                <p class="tagline">Find Your Perfect Opportunity</p>
+            </div>
+        </header>
+
+        <!-- Dashboard Section -->
+        <section class="dashboard">
+            <div class="dashboard-container">
+                <h2 class="dashboard-title">Dashboard</h2>
+                <div class="dashboard-cards">
+                    <div class="card-stat">
+                        <div class="stat-number" id="totalJobs">8</div>
+                        <div class="stat-label">Total Jobs</div>
+                    </div>
+                    <div class="card-stat">
+                        <div class="stat-number" id="interviewCount">0</div>
+                        <div class="stat-label">Interview</div>
+                    </div>
+                    <div class="card-stat">
+                        <div class="stat-number" id="rejectedCount">0</div>
+                        <div class="stat-label">Rejected</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Available Jobs Section -->
+        <section class="jobs-section">
+            <div class="jobs-header">
+                <h2 class="jobs-title">Available Jobs</h2>
+                <div class="jobs-count" id="jobsCount">8</div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="tabs-container">
+                <button class="tab-button active" data-tab="all">All Jobs</button>
+                <button class="tab-button" data-tab="interview">Interview</button>
+                <button class="tab-button" data-tab="rejected">Rejected</button>
+            </div>
+
+            <!-- Jobs Container -->
+            <div class="jobs-container">
+                <div class="tab-content active" data-tab="all" id="allTab">
+                    <!-- Jobs will be inserted here -->
+                </div>
+                <div class="tab-content" data-tab="interview" id="interviewTab">
+                    <div class="empty-state">
+                        <div class="empty-icon">📋</div>
+                        <h3>No Jobs Available</h3>
+                        <p>Start marking jobs for interview to see them here</p>
+                    </div>
+                </div>
+                <div class="tab-content" data-tab="rejected" id="rejectedTab">
+                    <div class="empty-state">
+                        <div class="empty-icon">❌</div>
+                        <h3>No Jobs Available</h3>
+                        <p>Rejected jobs will appear here</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
